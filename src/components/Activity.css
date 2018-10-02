@@ -1,0 +1,72 @@
+.activity-item{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding-left: 10px; */
+    /* padding-top: 5px; */
+    padding: 5px;
+}
+
+.activity-item:first-of-type{
+    border-top: 1px solid  rgba(11, 10, 16, .3);
+}
+
+.activity-item .avatar-div{
+    position: relative;
+    flex-basis:30px;
+    /* padding: 15px; */
+    padding: 5px;
+}
+/* Override in-line if you want specific height. */
+.vertical-line{
+    border-left: 1px solid rgba(11, 10, 16, .3) ;
+    height: 30px; 
+    margin-left: 15px;
+    margin-top: 40px;
+    position: absolute;
+    width:10%;
+}
+
+.activity-item:last-of-type .vertical-line{
+    display: none;
+}
+
+.activity-item .picture{
+    width:30px;
+    padding-top: 10px;
+}
+
+.activity-item .text-area{
+    display: flex;
+    padding-left: 5px;
+    flex: 1;    
+    flex-direction: column;
+}
+
+.activity-title{
+    padding-left: 5px;
+    font-size: 0.6em;
+    color:#8492af;
+}
+
+.time-ago{
+    display:flex;
+    padding-top: 0px;
+    line-height: 0.9rem;
+}
+
+.time-received{
+    padding-bottom: opx;
+    font-size: 0.6rem;
+    color:#8492af;
+}
+
+.activity-clock{
+    /* height: 0.6rem;
+    margin-right: 3px;
+    vertical-align: middle; */
+    height:0.6rem;
+    margin-right: 3px;
+    vertical-align:middle;
+}

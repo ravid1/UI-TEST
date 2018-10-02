@@ -1,0 +1,53 @@
+.task-item{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    border-top: 1px solid  rgba(11, 10, 16, .3);
+}
+
+.task-avatar{
+    height: 16px;
+    width: 16px;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #5384ff;
+    display: inline-block;
+}
+
+.task-text-area{
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.task-description{
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+.task-time{
+    font-size: 0.6em;
+    color: #8492af;
+}
+
+.task-time-delay{
+    font-size: 0.6em;
+    color: #fa6a9a;
+}
+
+.clock-icon{
+    height: 10px;
+    padding-top: 3px;
+    margin-right: 3px;
+    /* vertical-align: middle; */
+}
+
+.task-options{
+    height: 15px;
+    padding-right: 25px;
+}

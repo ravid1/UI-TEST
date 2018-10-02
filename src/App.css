@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  height: 100vh;
+}
+
+.menu{
+  background-color: #0e1a35;
+  flex: 1;
+  height: inherit;
+  text-align: left;
+}
+
+.menu-hide{
+  display: none;
+}
+
+.content{
+  flex: 7;
+}
+
