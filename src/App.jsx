@@ -24,10 +24,6 @@ class App extends Component {
       users : users
     }
   }
-
-  componentDidMount(){
-    console.log(data);
-  }
   
   render() {
     return (
