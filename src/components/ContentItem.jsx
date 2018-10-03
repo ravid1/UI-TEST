@@ -16,7 +16,6 @@ class ContentItem extends Component {
     getData = ()=>{
         switch(this.props.title){
             case 'Tasks':
-            console.log(this.props);
             return this.props.data.map((item,index)=>{
                 return (<Task task={item.title} time={item.time} key={index} />)
             });

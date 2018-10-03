@@ -38,7 +38,6 @@ class TopBar extends Component {
                 <img src={profileAvatar} className="photo" alt="profile avatar"/>
                 <img src={polygon} className="polygon" alt="polygon"/>
             </div>
-
         </div>
     )
   }
