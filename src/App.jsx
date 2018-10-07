@@ -40,10 +40,10 @@ class App extends Component {
             <TopBar />
             <Switch>
               <Route path={process.env.PUBLIC_URL+"/Workflow"} component={WorkFlow}/>
-              <Route path="/Statistic" component={Statistic}/>
-              <Route path="/Calendar" component={Calendar}/>
-              <Route path="/Users" component={Users}/>
-              <Route path="/Settings" component={Settings}/>
+              <Route path={process.env.PUBLIC_URL+"/Statistic"} component={Statistic}/>
+              <Route path={process.env.PUBLIC_URL+"/Calendar"} component={Calendar}/>
+              <Route path={process.env.PUBLIC_URL+"/Users"} component={Users}/>
+              <Route path={process.env.PUBLIC_URL+"/Settings"} component={Settings}/>
               <Route path="/" render={this.homeRender}/>
             </Switch>
           </div>
