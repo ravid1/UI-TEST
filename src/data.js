@@ -3,13 +3,22 @@ import alexandra from './icons/users/alexandra.png';
 import james from './icons/users/james.png';
 import nina from './icons/users/nina.png';
 
+import sales from './icons/sales.png';
+import report from './icons/report.png'
+
+
 const users= {1:{id: 1, name: "Nina Jones", picture: nina},
               2:{id: 2, name: "James Smith", picture: james},
               3:{id: 3, name: "Alex Clooneu", picture: alex},
               4: {id: 4, name: "Alexandra Spears", picture: alexandra}};
 
+const chartData = [
+    {title: 'Your Sales', icon: sales},
+    {title: 'Report', icon: report}
+];
               
-const data = [
+
+const contentData = [
     {
       title: "Tasks",
       notifications: [{num:5, color:'#5384ff'}, {num:2, color:'#f83c7b'}],
@@ -35,4 +44,4 @@ const data = [
              {title: "added a new project ", project: "Free PSD", time: '3 hours ago', userID:4}]
     }];
 
-export  {data,users};
+export  {contentData,chartData,users};

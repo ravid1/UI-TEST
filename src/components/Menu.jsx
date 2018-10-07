@@ -8,6 +8,8 @@ import calendar from '../icons/menu/calendar.png';
 import users from '../icons/menu/users.png';
 import settings from '../icons/menu/settings.png';
 
+import { Link } from 'react-router-dom';
+
 
 class Menu extends Component {
 
@@ -21,22 +23,42 @@ class Menu extends Component {
             {name:"Calendar",iconUrl:calendar},
             {name:"Users",iconUrl:users},
             {name:"Settings",iconUrl:settings}
-        ]
+          ]
+        }
+
+  }
+
+  componentDidMount(){
+    const menuItem = document.getElementById('menu0');
+    menuItem.classList.add('menu-item-clicked');
+  }
+
+  onClickHandler = (index)=>{
+    console.log(index);
+    const clickedMenuItem = document.getElementById('menu'+index);
+    const prevClickedMenuItem = document.querySelector('.menu-item-clicked');
+    if(prevClickedMenuItem){
+      prevClickedMenuItem.classList.remove('menu-item-clicked');
     }
+    if(!clickedMenuItem.classList.contains('menu-item-clicked')){
+      clickedMenuItem.classList.add('menu-item-clicked');
+    }
+  }
 
-}
-
-getMenu = ()=> {
-  return this.state.menuItems.map((menuItem,index)=>{
-      return(<div className="menu-item" key={index}>
-          <img src={menuItem.iconUrl} className="icon" alt={menuItem.name} />
-          <span>{menuItem.name}</span>
-      </div>)
-  })
-}
+  getMenu = ()=> {
+    return this.state.menuItems.map((menuItem,index)=>{
+        return(
+          <Link to={menuItem.name} style={{ textDecoration: 'none' }} className='link ' key={index} >
+            <div className="menu-item" id={'menu'+index} key={index} onClick={this.onClickHandler.bind(this,index)}>
+            <img src={menuItem.iconUrl} className="icon" alt={menuItem.name} />
+            <span >{menuItem.name}</span>
+            </div>
+            </Link>
+          )
+    })
+  }
 
   render() {
-
     const list = this.getMenu();
 
     return (

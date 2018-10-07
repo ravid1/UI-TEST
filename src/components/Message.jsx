@@ -5,12 +5,6 @@ import setting from '../icons/message/setting.png';
 
 class Message extends Component {
 
-    constructor(props){
-        super(props);
-        console.log(this.props.users);
-
-    }
-
     getMessageContent = ()=>{
         const content = this.props.message.content;
         if(content.length>41){

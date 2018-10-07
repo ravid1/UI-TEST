@@ -7,7 +7,6 @@ import options from '../icons/task/options.png';
 class Task extends Component {
 
     getTimeText = ()=>{
-        console.log(this.props);
         const delay = this.props.time.indexOf('delays')!==-1 ? true : false;
         if(delay){
             return (<div className="task-time-delay">
