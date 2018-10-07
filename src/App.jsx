@@ -39,7 +39,7 @@ class App extends Component {
           <div className="content">
             <TopBar />
             <Switch>
-              <Route path="/Workflow" component={WorkFlow}/>
+              <Route path={process.env.PUBLIC_URL+"/Workflow"} component={WorkFlow}/>
               <Route path="/Statistic" component={Statistic}/>
               <Route path="/Calendar" component={Calendar}/>
               <Route path="/Users" component={Users}/>
