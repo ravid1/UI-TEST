@@ -44,6 +44,7 @@ class App extends Component {
               <Route path={process.env.PUBLIC_URL+"/Calendar"} component={Calendar}/>
               <Route path={process.env.PUBLIC_URL+"/Users"} component={Users}/>
               <Route path={process.env.PUBLIC_URL+"/Settings"} component={Settings}/>
+              <Route path={process.env.PUBLIC_URL+"/Home"} render={this.homeRender}/>
               <Route path="/" render={this.homeRender}/>
             </Switch>
           </div>
